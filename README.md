@@ -57,3 +57,19 @@ In man buffer, you can use the following keymaps
 - `]t`		Find next keyword and move the cursor onto
 - `[t`		Find previous keyword and move the cursor onto
 - `q`		Close the manual page
+
+
+Optional config file
+-------------------------------------------------------------------------------
+
+In `~/.vimpagerc`
+
+        set colorscheme molokaiyo
+        set nonu
+        :imap jk <c-c>
+        :nnoremap K <PageUp>  
+        :nnoremap J <PageDown>
+        :vnoremap K <PageUp>  
+        :vnoremap J <PageDown>
+        :nnoremap C J
+        :nnoremap ; :
