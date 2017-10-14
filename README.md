@@ -7,8 +7,9 @@ See [lambdalisue/vim-pager](https://github.com/lambdalisue/vim-pager) for PAGER.
 ![Screencast](http://g.recordit.co/nnvpuIKOKK.gif)
 
 
-Install
+Official Install instructions: 
 -------------------------------------------------------------------------------
+
 
 ```vim
 " Vundle.vim
@@ -23,6 +24,24 @@ NeoBundleLazy 'lambdalisue/vim-manpager', {
         \   'commands': 'MANPAGER',
         \}}
 ```
+
+Erics custom instructions for gentoo:
+-------------------------------------------------------------------------------
+
+    cd ~/.vim/bundle/
+    git clone this_repository
+
+Put this in ~/.vimrc
+
+    "...
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+    "...  
+    Plugin 'lambdalisue/vim-manpager'
+    
+Put this in ~/.bashrc
+
+    export MANPAGER="vim -c MANPAGER -"
 
 
 Usage
