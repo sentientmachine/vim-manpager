@@ -44,27 +44,42 @@ Put this in ~/.bashrc
     export MANPAGER="vim -c MANPAGER -"
 
 
+
+
+Optional config file
+-------------------------------------------------------------------------------
+
+In `~/.vimpagerc`
+
+    set colorscheme molokaiyo
+    set nonu
+    :imap jk <c-c>
+    :nnoremap K <PageUp>  
+    :nnoremap J <PageDown>
+    :vnoremap K <PageUp>  
+    :vnoremap J <PageDown>
+    :nnoremap C J
+    :nnoremap ; :
+
+
+
 Usage
 -------------------------------------------------------------------------------
 
-To open vim via `man` command, use the following settings in your shell.
-
+To open vim via terminal `man` command, use the following settings in your shell.
 
 ```
 $ export MANPAGER="vim -c MANPAGER -"
 $ man git
 ```
 
-
-In Vim, you can use `Man` command to open a man page (the plugin overwrite the
-default `Man` command defined in default `ftplugin/man.vim` to improve the
-behavior)
+Inside Vim, you can use `:Man` command to open a man page (the plugin overwrite the default `Man` command defined in default `ftplugin/man.vim` to improve the behavior)
 
 ```
 :Man git
 ```
 
-In man buffer, you can use the following keymaps
+In the man buffer, you can use the following keymaps
 
 - `Ctrl-]`		Open the manual page for the word under the cursor
 - `Enter`		Open the manual page for the word under the cursor
@@ -76,19 +91,3 @@ In man buffer, you can use the following keymaps
 - `]t`		Find next keyword and move the cursor onto
 - `[t`		Find previous keyword and move the cursor onto
 - `q`		Close the manual page
-
-
-Optional config file
--------------------------------------------------------------------------------
-
-In `~/.vimpagerc`
-
-        set colorscheme molokaiyo
-        set nonu
-        :imap jk <c-c>
-        :nnoremap K <PageUp>  
-        :nnoremap J <PageDown>
-        :vnoremap K <PageUp>  
-        :vnoremap J <PageDown>
-        :nnoremap C J
-        :nnoremap ; :
