@@ -41,9 +41,9 @@ Put this in ~/.vimrc
     
 Put this in ~/.bashrc
 
-    export MANPAGER="vim -c MANPAGER -"
-
-
+    #:on makes this the only window, :set modifiable lets me edit the buffer
+    export MANPAGER="vim -c MANPAGER -c ':set modifiable' -c ':on' -"
+    
 
 
 Optional config file
